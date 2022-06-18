@@ -1,0 +1,69 @@
+@media screen and (max-width: 745px){
+    .cap{
+        display: none;
+    }
+
+    .cap_fake{
+        display: none;
+    }
+    .lilInnerWidth{
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .lilInnerWidth img{
+        width: 100%;
+    }
+.yavizhurezultat{
+    display: none;
+}
+.gdeTi{
+    display: none;
+}
+
+    .danya{
+        display: none;
+    }
+
+    .opisDanyaf{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 280px){
+    .cap{
+        display: none;
+    }
+
+    .cap_fake{
+        display: none;
+    }
+    .lilInnerWidth{
+        width: 100%;
+        margin: auto;
+        display: block;
+    }
+
+    .lilInnerWidth img{
+        width: 100%;
+        height: 500px;
+    }
+.yavizhurezultat{
+    display: none;
+}
+.gdeTi{
+    display: none;
+}
+
+    .danya{
+        display: none;
+    }
+}
+
+@media screen and(max-width:450px) {
+        .bleed{
+            display:inline;
+        }
+}

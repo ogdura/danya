@@ -1,0 +1,886 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+@media screen and (max-width:450px){
+    .bleed{
+        display: inline-block;
+        list-style-type: none;
+    }
+}
+.cap {
+    width: 100%;
+    height: 80px;
+    background: #fcbdf1;
+    text-align: center;
+    margin: 0px auto;
+    z-index: 0;
+}
+
+.cap_fake {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 80px;
+    background: #fcbdf1;
+    text-align: center;
+}
+
+.cap li {
+    display: inline;
+    position: relative;
+    top: 20px;
+    margin-left: 30px;
+    font-size: 17px;
+}
+
+
+.shit{
+    margin-top:20px;
+    display: none;
+}
+
+a {
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-seri;
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: Montserrat, "Open Sans", Helvetica, Arial, sans-seri;
+}
+
+.aboutText{
+    text-align: center;
+    font-size:30px;
+}
+
+.golova{
+    position: relative;
+    top:40px;
+    right:15px;
+}
+
+.viborRight{
+    line-height: 100px;
+    vertical-align: middle;
+}
+
+.rightDanya{
+    height: 100px;;
+    width: 100px;
+    margin-top:100px;
+    border-radius: 20px;
+    background:rgb(239 239 239);
+    float: right;
+    cursor: pointer;
+    position: relative;
+    bottom: 1060px;
+}
+
+.fuckHorse{
+    display: none;
+    width: 250px;
+    height: 250px;
+}
+
+.itogLevel{
+    margin-top:20px;
+    display: none;
+}
+
+.kartItog{
+    display: none;
+    margin: auto;
+}
+
+.zaebis{
+    margin-top:20px;
+    display: none;
+}
+
+.answer1{
+    width: 500px;
+    height: 70px;
+    background: black;
+    border-radius: 25px;
+}
+
+.voprBad{
+    margin-top:20px;
+}
+
+.badAnsw{
+    margin-top:10px;
+}
+
+.goodAnsw{
+    margin-top: 4px;
+}
+
+.sectorGaza{
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 25%;
+    left: 5%;
+    border-radius: 10px;
+    
+}
+
+.kartItog{
+    width: 50%;
+    height: 600px;
+}
+
+.sadLife{
+    position: relative;
+    top: 540px;
+    left: 25%;
+    width: 25%;    
+    height: 65px;
+    background: #f3cbec;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.sadLife p{
+    position: relative;
+    top: 25%;
+}
+
+.otvetOne{
+    color:white;
+    width: 50%;
+    height: 70px;
+    background: rgb(39, 39, 39);
+    border-radius: 25px;
+    margin-top:25px;
+    position: relative;
+    left: 25%;
+    line-height: 65px;
+    cursor: pointer;
+}
+
+.otvetOne:hover{
+    color:white;
+    width: 50%;
+    height: 70px;
+    background: rgb(68, 68, 68);
+    border-radius: 25px;
+    margin-top:25px;
+    position: relative;
+    left: 25%;
+    line-height: 65px;
+    cursor: pointer;
+}
+
+.otvetOne text{
+    position: relative;
+    top: 45%;
+}
+
+.smoke img{
+    width: 65px;
+    height: 80px;
+}
+.samDanya img{
+    width: 200px;
+    height: 400px;
+}
+
+.siga img{
+   width: 150px;
+   height: 80px;
+}
+body{
+    text-align: center;
+    font-size: 30px;
+}
+
+body h1{
+    text-align: center;
+    font-size: 25px; 
+}
+
+
+.gdeTi{
+    float: right;
+    width: 100px;
+}
+
+.yavizhurezultat{
+    float: left;
+    width:100px;
+}
+
+.rightDanyaBody img{
+    height: 100px;
+    width: 100px;
+}
+
+.obnov{
+    font-size: 15px;
+    text-align: center;
+}
+
+.nogi{
+    position: relative;
+    bottom: 17px;
+    left: 79px;
+}
+
+.leftDanya{
+    height: 100px;;
+    width: 100px;
+    margin-top:100px;
+    border-radius: 20px;
+    background:rgb(239 239 239);
+    float: left;
+    cursor: pointer;
+    position: relative;
+    bottom: 1060px;
+}
+
+.start{
+    width: 200px;
+    height: 65px;
+    background: #f3cbec;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.start:hover{
+    width: 250px;
+    height: 65px;
+    transition: all;
+    transition-duration: 450ms;
+    background: #f7daf2;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+    border-radius: 45px;
+    cursor: pointer;
+}
+
+.start p{
+    position: relative;
+    top: 25%;
+}
+
+
+.leftDanya img{
+    height: 100px;
+    width: 100px;
+}
+
+.rightDanya img{
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+.his_info {
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+
+.his_info p {
+    margin-top: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+#right-music {
+    height: 300px;
+    width: 100px;
+    border-radius: 20px;
+    float: right;
+    cursor: pointer;
+    position: relative;
+    bottom: 400px;
+}
+
+#right-music img {
+    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+
+#left-music {
+    height: 300px;
+    width: 100px;
+    border-radius: 20px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+    bottom: 400px;
+}
+
+#left-music img {
+    margin-top: 100px;
+    height: 100px;
+    width: 100px;
+}
+
+#slide-music {
+    cursor: pointer;
+    height: 500px;
+    background:none;
+    margin:auto;
+}
+
+   #slide-music img {
+       width:100%;
+       height:500px;
+}
+   
+
+
+.photo{
+    position: relative;
+  bottom: 14px;
+  cursor: pointer;
+}
+
+.vasya{
+    position: relative;
+    bottom: 15px;
+}
+
+
+.testik img{
+    width: 50%;
+    cursor: pointer;
+    height: 400px;
+}
+
+@media screen and (max-width: 800px){
+    .telw{
+        display: inline;
+    }
+    .wbig{
+        display: none;
+    } 
+}
+
+@media screen and (max-width: 1000px){
+    .cap {
+        width: 100%;
+        height: 50px;
+        background: #fcbdf1;
+        text-align: center;
+        margin: 0px auto;
+        z-index: 0;
+    }
+    
+    .cap_fake {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 50px;
+        background: #fcbdf1;
+        text-align: center;
+    }
+    
+    .cap li {
+        display: inline;
+        position: relative;
+        top: 5px;
+        margin-left: 30px;
+        font-size: 17px;
+    }   
+}
+
+.burger{
+    width: 80px;
+    height: 40px;
+    float: right;
+    display: none;
+}
+
+.burger img{
+    width: 80px;  
+    height: 40px;
+    position: relative;
+    top:4px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 450px){
+    .cap {
+        width: 100%;
+        height: 50px;
+        background: #fcbdf1;
+        text-align: center;
+        margin: 0px auto;
+        z-index: 0;
+    }
+    
+    .cap_fake {
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        height: 50px;
+        background: #fcbdf1;
+        text-align: center;
+    }
+    
+    .cap li {
+       display: none;
+    }  
+    
+    .wbig{
+        display: none;
+    }
+
+
+    .burger{
+        width: 80px;
+        height: 40px;
+        float: right;
+        display: block;
+    }
+    
+    .burger img{
+        width: 80px;  
+        height: 40px;
+        position: relative;
+        top:4px;
+        cursor: pointer;
+    }
+}
+
+.menu{
+    box-shadow: 2px solid black;
+    width: 100%;
+    height: 191px;
+    background: #ffffff;
+    display: none;
+
+}
+
+
+
+.menuFake{
+    position: fixed;
+    border: 1px solid #b367a6;
+    box-shadow: 2px solid black;
+    width: 100%;
+    height: 191px;
+    z-index: 9999;
+    background: #ffffff;
+    display: none;
+
+}
+
+.menu li{
+   margin-top:14px;
+}
+
+.lilInnerWidth{
+    display: none;
+
+}
+
+@media screen and (max-width: 800px){
+    h1{
+        font-size: 25px;
+    }
+
+    .aboutText{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 445px){
+    h1{
+        font-size: 20px;
+    }
+    .aboutText{
+        display: none;
+    }
+
+    .obnov{
+        display: none;
+    }
+
+    #slide-music{
+        display: none;
+    }
+
+    #right-music{
+        display: none;
+    }
+
+    #left-music{
+        display: none;
+    }
+
+    .fuckHorse{
+        display: block;
+        width: 200px;
+        height: 200px;
+        margin-top:25px;
+    }
+
+    .fuckHorse img{
+        position: relative;
+        bottom: 20px;
+        width: 200px;
+        height: 200px;
+        margin-top:25px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    h1{
+        font-size: 20px;
+    }
+
+    #slide-music {
+        cursor: pointer;
+        height: 450px;
+        background: none;
+    }
+
+
+
+    #slide-music img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .aboutText{
+        display: none;
+    }
+
+    .menu{
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 230px){
+    
+    h1{
+        font-size: 20px;
+    }
+    .aboutText{
+        display: none;
+    }
+
+.menu{
+    font-size: 25px;
+}
+
+    .obnov{
+        display: none;
+    }
+
+    #slide-music{
+        display: none;
+    }
+
+    #right-music{
+        display: none;
+    }
+
+    #left-music{
+        display: none;
+    }
+
+    .fuckHorse{
+        display: block;
+        width: 140px;
+        height: 140px;
+        margin-top:25px;
+    }
+
+    .fuckHorse img{
+        position: relative;
+        bottom: 20px;
+        width: 140px;
+        height: 140px;
+        margin-top:25px;
+    }
+}
+
+@media screen and (max-width:190px){
+    .menu{
+        font-size:20px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .sadLife{
+        font-size:20px;
+    }
+
+    .sadLife p {
+        position: relative;
+        top: 20px;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    .otvetOne{
+        font-size:24px;
+    }
+}
+
+
+@media screen and (max-width: 550px){
+    .otvetOne{
+        font-size:20px;
+    }
+}
+
+@media screen and (max-width: 428px){
+    .otvetOne{
+        font-size:16px;
+    }
+    .sadLife {
+        position: relative;
+        top: 540px;
+        left: 25%;
+        width: 25%;
+        height: 45px;
+        background: #f3cbec;
+        text-align: center;
+        font-size: 18px;
+        margin: auto;
+        border-radius: 45px;
+        cursor: pointer;
+    }
+    
+    .sadLife p{
+        position: relative;
+        top: 25%;
+    }
+
+}
+
+@media screen and (max-width: 344px){
+    .otvetOne{
+        color:white;
+        width: 100%;
+        height: 40px;
+        background: rgb(39, 39, 39);
+        border-radius: 25px;
+        margin-top:25px;
+        line-height: 44px;
+        cursor: pointer;
+        position: relative;
+        left: 0%;
+    }
+    
+
+    .sadLife {
+        position: relative;
+        top: 484px;
+        left: 25%;
+        width: 50%;
+        height: 45px;
+        background: #f3cbec;
+        text-align: center;
+        font-size: 18px;
+        margin: auto;
+        border-radius: 45px;
+        cursor: pointer;
+    }
+    
+    .sadLife p{
+        position: relative;
+        top: 25%;
+    }
+
+    .otvetOne:hover{
+        color:white;
+        width: 100%;
+        left: 0%;
+        height: 40px;
+        background: rgb(68, 68, 68);
+        border-radius: 25px;
+        margin-top:25px;
+        position: relative;
+        line-height: 44px;
+        cursor: pointer;
+    }
+
+    .mozgi{
+        font-size:24px;
+    }
+
+
+    .zaebis{
+        font-size: 21px;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .kartItog{
+        width: 100%;
+    }
+
+    .badAnsw{
+        font-size: 20px;
+    }
+    
+    .goodAnsw{
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width: 244px){
+
+
+.shit{
+    font-size: 18px;
+}
+
+
+    .mozgi{
+        font-size: 18px;
+    }
+
+    .itogLevel{
+        font-size: 20px;
+    }
+
+    .zaebis{
+        font-size:14px;
+    }
+}
+
+@media screen and (max-width: 200px){
+    
+    .badAnsw{
+        font-size: 14px;
+    }
+    
+    .goodAnsw{
+        font-size: 14px;
+    }
+  
+    .samDanya img{
+        width: 100%;
+        height: 200px;
+    }
+
+    #siga{
+        width: 100px;
+        height: 40px;
+    }
+    
+}
+
+@media screen and (max-width:  248px){
+    .ebashim{
+        width: 100%;
+        background: #f3cbec;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    border-radius: 45px;
+    cursor: pointer;
+    }
+
+    
+
+    .ebashim:hover{
+    width: 100%;
+    background: #f3cbec;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
+    border-radius: 45px;
+    cursor: pointer;
+    }
+
+    .ebashim p{
+        position: relative;
+        top: 28px;
+    }
+}
+
+@media screen and (max-width: 540px){
+  .cap li{
+      font-size: 14px;
+  }
+}
+
+.indexImg{
+    height: 600px; width: 80%; margin: auto; margin:auto;
+}
+
+.forPhone{
+    width: 200px;
+    height: 200px;
+    margin:auto;
+}
+
+.napitki{
+    margin:auto;
+}
+
+.smoke{
+    margin: auto;
+}
+
+.siga{
+    margin: auto;
+}
+
+.samDanya{
+    margin: auto;
+}
+
+@media screen and (min-width:600px) {
+    .indexImg{
+    width: 90%;
+    height: 250px;   }
+}
+
+@media screen and (min-width:800px) {
+    .indexImg{
+    width: 90%;
+    height: 300px;   }
+}
+
+@media screen and (min-width:1000px) {
+    .indexImg{
+    width: 90%;
+    height: 400px;   }
+}
+
+
+@media screen and (min-width:1500px) {
+    .indexImg{
+    width: 90%;
+    height: 600px;   }
+}

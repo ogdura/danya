@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Даня блин</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+        <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+        <div class="cap">
+                <div class="cap_fake">
+                    
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li class="wbig ">
+                         <a href="naryad.html">
+                     Наряди Даню
+                </a>
+                     </li>
+                     <li class="telw" style='display:none'>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                 </ul>
+                 <div class="burger">
+                        <img src="img/icon.png" alt="" class="icona">
+                 </div>
+             </div>
+             </div>
+                 <div class="menu"> 
+             <div class="menuFake">
+                 <ul class="bleed1">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                 </ul>
+             </div>
+            </div>
+    <div class="his_info">
+        <h1>
+        Григорьевские ленточки прекрасны 
+    </h1>
+    <p>
+ Даня приятный молодой паренек. Играет в футбол,  учит химию (удивительно!), потому  что хочет работать зубным техником.
+    </p>
+    <p style="font-size: 50px">
+        Вкусы Дани
+    </p>
+    <p>
+        Даня  типичный эмо-бой: носил длинные волосы, иногда называли джастином бибером, слушает суицайд бойзов. Он хорошо разбирается в моде - покупает стильные вещи. Любит макароны с тушёнкой. Он очень добрый.
+    </p>
+        <img src="img/oCnwKYkLN44.jpg" class="indexImg" alt="" ">
+    <p style="font-size:50px">
+        Повседневные вещи Данилы 
+    </p>
+    <p>
+    Данил гуляет, подписан на паблик создателя сайта. Данил проходил много лет на футбол.Он отличный вратарь и хороший футболист. Носит аирмаксы  90-e. Когда Даня играет в контр-страй, он заходит на даст 2 и чекает суицайд).
+<p class="photo" onclick="FuckBatya()">  Если вы не видели фотографий  с Данилой, то вы сможете увидеть их на этом сайте. </p>
+    </p>
+    <p class="vasya">
+        Даня занимается рэпом и сделал фит с ethereal boy, со своим продюссерем, и с самим <a href="https://soundcloud.com/giveyoumoon">  Алексеем (giveyoumoon) </a>
+    </p>
+    
+        <img src="img/FVEsnVOL1Lk.jpg" alt="" class="indexImg">
+    
+      <p style="font-size:50px">
+         Особенность Данила
+    </p>   
+       <p>
+           Данил очень хороший парень. Он трушный (так называют истинных фанатов) суицайд - постоянно молчит, одевается как эмо-бой, поговорит, когда надо. Поэтому получилось так, что ты с ним не заскучаешь и он тебе не надоест лишними разговорами. Он всегда идет гулять.
+       </p> 
+        <img src="img/375GULwwnew.jpg" alt="" class="indexImg">
+      <p style="font-size:50px">
+         Что еще можно найти на сайте Данила?
+    </p>   
+    <p>
+        Подробно изучите шапку сайта, потому что там все podrobno написан.
+    </p>
+    </div>
+    <script src="js/burger.js"></script>
+    <script>
+        if(window.innerWidth<=450){
+    document.getElementsByTagName('h1')[0].style.fontSize=20+'px';
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+document.getElementsByTagName('p')[0].style.fontSize=20+'px';
+
+var imgDanya = document.getElementsByTagName('img');
+var h=document.getElementsByTagName('p');
+
+for(var bu=1;bu<imgDanya.length;bu++){
+    imgDanya[bu].style.width='100%';
+    imgDanya[bu].style.height=250+'px';
+} 
+
+
+for(var m=0;m<h.length;m++){
+h[m].style.fontSize=20+'px';
+}
+
+  }
+
+  if(window.innerWidth<=250){
+      
+var imgDanya = document.getElementsByTagName('img');
+var h=document.getElementsByTagName('p');
+
+for(var bu=1;bu<imgDanya.length;bu++){
+    imgDanya[bu].style.width='100%';
+    imgDanya[bu].style.height=250+'px';
+} 
+
+
+for(var m=0;m<h.length;m++){
+h[m].style.fontSize=14+'px';
+}
+
+document.getElementsByTagName('h1')[0].style.fontSize=14+'px';
+
+  }
+
+
+  if(window.innerWidth<=180){
+      
+      var imgDanya = document.getElementsByTagName('img');
+      var h=document.getElementsByTagName('p');
+      
+      for(var bu=1;bu<imgDanya.length;bu++){
+          imgDanya[bu].style.width='100%';
+          imgDanya[bu].style.height=180+'px';
+      } 
+      
+      
+      for(var m=0;m<h.length;m++){
+      h[m].style.fontSize=11+'px';
+      }
+      
+      document.getElementsByTagName('h1')[0].style.fontSize=11+'px';
+      
+        }
+
+
+window.onresize=function(){
+
+       if(window.innerWidth<745){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='inline-block';
+
+}
+
+if(window.innerWidth>745){
+document.getElementsByClassName('wbig')[0].style.display='inline-block';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth>450){
+    document.getElementsByClassName('menuFake')[0].style.display="none";
+    document.getElementsByClassName('menu')[0].style.display="none";
+    klick=0;
+}
+
+if(window.innerWidth<=450){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+
+var imgDanya = document.getElementsByTagName('img');
+var h=document.getElementsByTagName('p');
+
+for(var bu=1;bu<imgDanya.length;bu++){
+    imgDanya[bu].style.width='100%';
+    imgDanya[bu].style.height=250+'px';
+} 
+
+for(var m=0;m<h.length;m++){
+h[m].style.fontSize=20+'px';
+}
+
+  }
+
+  if(window.innerWidth<=250){
+      
+      var imgDanya = document.getElementsByTagName('img');
+      var h=document.getElementsByTagName('p');
+      
+      for(var bu=1;bu<imgDanya.length;bu++){
+          imgDanya[bu].style.width='100%';
+          imgDanya[bu].style.height=250+'px';
+      } 
+      
+      
+      for(var m=0;m<h.length;m++){
+      h[m].style.fontSize=14+'px';
+      }
+      
+      document.getElementsByTagName('h1')[0].style.fontSize=14+'px';
+      
+        }
+
+        if(window.innerWidth<=180){
+      
+      var imgDanya = document.getElementsByTagName('img');
+      var h=document.getElementsByTagName('p');
+      
+      for(var bu=1;bu<imgDanya.length;bu++){
+          imgDanya[bu].style.width='100%';
+          imgDanya[bu].style.height=180+'px';
+      } 
+      
+      
+      for(var m=0;m<h.length;m++){
+      h[m].style.fontSize=12+'px';
+      }
+      
+      document.getElementsByTagName('h1')[0].style.fontSize=12+'px';
+      
+        }
+  
+ }
+    if(window.innerWidth<800){
+        document.getElementsByClassName('telw')[0].style.display='inline';
+        document.getElementsByClassName('wbig')[0].style.display='none';
+    }
+    </script>
+</body>
+
+</html>

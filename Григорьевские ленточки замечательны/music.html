@@ -1,0 +1,316 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Даня блин</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+     <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+        <div class="cap">
+                <div class="cap_fake">
+                    
+                 <ul class="bleed">
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                     <a href="index.html">
+                            Домой
+                  </a>
+                </li>
+                           </li>
+                     <li class="wbig ">
+                         <a href="naryad.html">
+                     Наряди Даню
+                </a>
+                     </li>
+                     <li class="telw" style='display:none'>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                 </ul>
+                 <div class="burger">
+                        <img src="img/icon.png" alt="" class="icona">
+                 </div>
+             </div>
+             </div>
+                 <div class="menu"> 
+             <div class="menuFake">
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                     <li>
+                            <a href="index.html">
+                         Домой
+               </a>
+                        </li>
+                 </ul>
+             </div>
+            </div>
+
+    <h1 style='margin-top:5px'>
+        Любимая музыка Дани Григорьева
+    </h1>
+
+        <div id="slide-music" onclick="dfga()">
+            <div class="playt">
+                
+            </div>
+            <img src="img/sucide.jpg" alt="" class="forYou" id='p0'>
+            <img src="img/ucheba.jpg" alt="" class="forCenter" style="display:none;" id='p1'>
+            <img src="img/picture_2.jpg" alt="" style="display:none" class="picture_2" id='p2'>
+            <img src="img/picture_3.jpg" alt="" style="display:none" class="picture_3" id='p3'>
+            <img src="img/picture_4.jpg" alt="" style="display:none" class="picture_4" id='p4'>
+            <img src="img/picture_5.jpg" alt="" style="display:none" class="picture_5" id='p5'>
+            <img src="img/picture_6.png" alt="" style="display:none" class="picture_6" id='p6'>
+            <img src="img/picture_7.png" alt="" style="display:none" class="picture_7" id='p7'>
+            <img src="img/picture_8.jpg" alt="" style="display:none" class="picture_8" id='p8'>
+            <img src="img/picture_9.jpg" alt="" style="display:none" class="picture_9" id='p9'>
+            <img src="img/picture_10.jpg" alt="" style="display:none" class="picture_10" id='p10'>
+        </div>
+  
+         <audio src="music/gjfh.mp3" autostart class='g'></audio> 
+         <audio src="music/$UICIDEBOY$ - EXODUS.mp3" autostart class='s'></audio> 
+         <audio src="music/5.mp3" autostart class='5'></audio> 
+         <audio src="music/bl.mp3" autostart class='gtl'></audio> 
+         <audio src="music/st.mp3" autostart class="st"></audio>
+         <audio src="music/m.mp3" autostart class="m"></audio>
+         <audio src="music/antr.mp3" autostart class="antr"></audio>
+         <audio src="music/lte.mp3" autostart class="lte"></audio>
+         <audio src="music/cw.mp3" autostart class="cw"></audio>
+         <audio src="music/l.mp3" autostart class="l"></audio>
+         <audio src="music/govno.mp3" autostart class="govno"></audio>
+    <div id="right-music" onclick="gg()">
+        <img src="img/right.png" alt="">
+    </div>
+
+    <div id="left-music" onclick="ggLeft()">
+        <img src="img/lleft.png" alt="">
+    </div>
+    <p class='aboutText'>
+        Здесь представлена любимая музыка Дани. Чтобы включить музыку нажмите на обложку трека.
+    </p>
+    <div class="forPhone">
+        <div class="fuckHorse" id='0'><img src="img/sucide.jpg" alt=""></div>
+        <img src="img/ucheba.jpg" alt="" class="fuckHorse" id='1'>
+        <img src="img/picture_2.jpg" alt="" class="fuckHorse" id='2'>
+        <img src="img/picture_3.jpg" alt=""  class="fuckHorse" id='3'>
+        <img src="img/picture_4.jpg" alt="" class="fuckHorse" id='4'>
+        <img src="img/picture_5.jpg" alt=""  class="fuckHorse" id='5'>
+        <img src="img/picture_6.png" alt=""  class="fuckHorse" id='6'>
+        <img src="img/picture_7.png" alt=""  class="fuckHorse" id='7'>
+        <img src="img/picture_8.jpg" alt=""  class="fuckHorse" id='8'>
+        <img src="img/picture_9.jpg" alt="" class="fuckHorse" id='9'>
+        <img src="img/picture_10.jpg" alt="" class="fuckHorse" id='10'>
+    </div>
+
+
+    <div class="zaderzhka" style="display:none" class='pizdat'>
+
+    </div>
+
+        <script>
+            
+        var nuZaChto=0;
+        var kolvoNone=[];
+kolvoNone[0]=document.getElementsByClassName("forYou")[0];
+kolvoNone[1]=document.getElementsByClassName("forCenter")[0];
+kolvoNone[2]=document.getElementsByClassName("picture_2")[0];
+kolvoNone[3]=document.getElementsByClassName("picture_3")[0];
+kolvoNone[4]=document.getElementsByClassName("picture_4")[0];
+kolvoNone[5]=document.getElementsByClassName("picture_5")[0];
+kolvoNone[6]=document.getElementsByClassName("picture_6")[0];
+kolvoNone[7]=document.getElementsByClassName("picture_7")[0];
+kolvoNone[8]=document.getElementsByClassName("picture_8")[0];
+kolvoNone[9]=document.getElementsByClassName("picture_9")[0];
+kolvoNone[10]=document.getElementsByClassName("picture_10")[0];
+
+
+
+var bad=[];
+bad[0]=document.getElementsByClassName('g')[0];
+bad[1]=document.getElementsByClassName('s')[0];
+bad[2]=document.getElementsByClassName('5')[0];
+bad[3]=document.getElementsByClassName('gtl')[0];
+bad[4]=document.getElementsByClassName('st')[0];
+bad[5]=document.getElementsByClassName('m')[0];
+bad[6]=document.getElementsByClassName('antr')[0];
+bad[7]=document.getElementsByClassName('lte')[0];
+bad[8]=document.getElementsByClassName('cw')[0];
+bad[9]=document.getElementsByClassName('l')[0];
+bad[10]=document.getElementsByClassName('govno')[0];
+
+
+   
+
+
+function zad(){
+    setTimeout(ilife,5000);
+}
+
+
+
+
+function ilife(){
+
+    nuZaChto=nuZaChto+1;
+           //alert(nuZaChto);
+           if( nuZaChto>10){
+              nuZaChto=0;
+            $(kolvoNone[nuZaChto]).show(1000);
+               $(kolvoNone[10]).hide(100);
+               bad[10].pause();
+           } 
+           $(kolvoNone[nuZaChto]).show(1000);
+                                            
+           $(kolvoNone[nuZaChto-1]).hide(100);
+           bad[nuZaChto-1].pause();
+}
+
+function dfga(){
+   // alert('gfd');
+    if(bad[nuZaChto].paused==true){
+        bad[nuZaChto].play();
+    }else{
+        bad[nuZaChto].pause();
+    }
+}
+
+var liverpool = document.getElementsByClassName('fuckHorse');
+for(var pip=0;pip<liverpool.length;pip++){
+    liverpool[pip].addEventListener('click',function(){
+        var ider = this.id
+        if(bad[ider].paused==true){
+            for(var n=0;n<bad.length;n++){
+                bad[n].pause();
+            }
+            bad[this.id].play()
+         }else{
+           bad[this.id].pause();
+        }
+    });
+}
+
+
+      function gg(){
+          if(document.getElementById('p'+nuZaChto).style.width==100+'%'){
+              /*alert('gg');*/
+              ilife();
+          }
+          if(kolvoNone[nuZaChto].style.display=='block'){
+              //alert('gg');
+          }
+                 }
+
+        //   alert(kolvoNone[0].style.display=='block');
+
+                 function ggLeft(){
+                     if(document.getElementById('p'+nuZaChto).style.width==100+'%'){ 
+                   nuZaChto=nuZaChto-1;
+                   if(nuZaChto<0){
+                        nuZaChto=10;
+                        $(kolvoNone[nuZaChto]).show(1000);
+                        $(kolvoNone[0]).hide(100);
+                        bad[0].pause();
+                    }
+                    $(kolvoNone[nuZaChto]).show(1000);
+                    $(kolvoNone[nuZaChto+1]).hide(100);
+                   bad[nuZaChto+1].pause();}
+                }
+
+        var shluha=0;
+        var rightMusic = document.getElementById("right-music");
+        var rightMusicWidth = rightMusic.offsetWidth;
+        var leftMusic = document.getElementById("left-music");
+        var leftMusicWidth = leftMusic.offsetWidth;
+        var samSlide = document.getElementById("slide-music");
+        var samSlideWidth = samSlide.offsetWidth;
+        var shirina;
+        var smart = 1;
+        shirina = innerWidth - rightMusicWidth - leftMusicWidth - 15;
+        document.getElementById("slide-music").style.width = shirina + 'px';
+
+        if(window.innerWidth == 640) {
+            document.getElementsByClassName("bleed").style.display = "none";
+        }
+
+        for(i=0;i<=10;i++){
+            document.getElementById('p'+i).style.width=100+'%';
+        }
+
+window.onresize=function(){
+
+
+
+
+
+
+}
+var klick = 0;
+$('.burger').click(function(){
+if(klick<1){ 
+    klick++
+$(".menu").slideDown(1000);
+$(".menuFake").slideDown(1000);
+}else if(klick>0){
+    $(".menu").slideUp(1000);
+    $(".menuFake").slideUp(1000);
+    klick--;
+}
+});
+ 
+  window.onresize=function(){
+    shirina = innerWidth - rightMusicWidth - leftMusicWidth - 15;
+        document.getElementById("slide-music").style.width = shirina + 'px';     
+    if(window.innerWidth>450){
+           document.getElementsByClassName('menu')[0].style.display='none';
+           document.getElementsByClassName('menuFake')[0].style.display='none';    
+       }
+
+
+       if(window.innerWidth<745){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='inline-block';
+
+}
+
+if(window.innerWidth>745){
+document.getElementsByClassName('wbig')[0].style.display='inline-block';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth<=450){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+ 
+  }
+
+
+
+    </script>
+</body>
+
+</html>

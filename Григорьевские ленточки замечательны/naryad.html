@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Даня блин</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="dd.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+     <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+        <div class="cap">
+                <div class="cap_fake">
+                    
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+
+                    </li>
+                 
+                     
+                     <li class="telw" style='display:none'>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+            <li> 
+                    <a href="index.html">
+                           Домой
+                 </a>
+               </li>
+                 </ul>
+                 <div class="burger">
+                        <img src="icon.png" alt="" class="icona">
+                 </div>
+             </div>
+             </div>
+                 <div class="menu"> 
+             <div class="menuFake">
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+
+                     <li>
+                            <a href="index.html">
+                         Домой
+               </a>
+                        </li>
+                 </ul>
+             </div>
+            </div>
+
+
+        <h1 class="opisDanyaf">
+           Это наряд Дани. У него сегодня плохое настроение и  у него меняются быстро вкусы. Именно поэтому после обновления страницы ему хочется поменять наряд. 
+           Подберите ему вещи. Если ему понравится, то он издаст характерный звук))) 
+        </h1>
+        <center>
+   <div class="danya">
+       <div class="golova"> 
+        <img src="img/danyahead.png" alt="" class="0golova" style="display:block">   
+        <img src="img/1danyahead.png" alt="" style="display:none" class='1golova'>   
+        <img src="img/2danyahead.png" alt="" style="display:none" class='2golova'>   
+        <img src="img/3headdanya.png" alt="" style="display:none" class='3golova'> 
+        <img src="img/4headdanya.png" alt="" style="display:none" class='4golova'>  
+        <img src="img/5danyahead.png" alt="" style="display:none" class='5golova'> 
+    </div>
+        <div class="telo"> 
+            <img src="img/danyabody.png" alt="" class="0telo" style="display:block">
+            <img src="img/1bodydanya.png" alt="" style='display:none' class='1telo'>
+            <img src="img/2danyabody.png" style='display:none' class='2telo'>
+            <img src="img/3danyabody.png" style='display:none' class='3telo'>
+            <img src="img/4bodydanya.png" style='display:none' class='4telo'>
+            <img src="img/5bodydanya.png" style='display:none' class='5telo'>
+        </div>
+        <div class="nogi">
+            <img src="img/danyanogi.png" alt="" class="0nogi" style="display:block">
+             <img src="img/1danyanogi.png" alt="" style="display: none" class='1nogi'>
+             <img src="img/2nogidanya.png" alt="" style="display: none" class='2nogi'>
+             <img src="img/3danyanogi.png" alt="" style="display: none" class='3nogi'> 
+             <img src="img/4danyanogi.png" alt="" style="display: none" class='4nogi'> 
+             <img src="img/5danyanogi.png" alt="" style="display: none" class='5nogi'> 
+        </div>
+   </div> 
+</center>
+
+<div class="gdeTi">
+   <div class="rightDanya" onclick="headRight()">
+    <img src="img/right.png" alt="">
+</div>
+
+ 
+    
+    <div class="rightDanya " onclick="bodyRight()">
+        <img src="img/right.png" alt="">
+    </div> 
+
+    <div class="rightDanya" onclick="nogiRight()">
+        <img src="img/right.png" alt="">
+    </div>
+</div>
+
+<div class="yavizhurezultat">
+  <div class="leftDanya" onclick="headLeft()">
+      <img src="img/lleft.png" alt="">
+  </div>
+  <div class="leftDanya" onclick="bodyLeft()">
+    <img src="img/lleft.png" alt="">
+  </div>
+  <div class="leftDanya" onclick="nogiLeft()">
+    <img src="img/lleft.png" alt="">
+  </div>
+</div>
+
+<div class="lilInnerWidth">
+    <h1>нажми на изображение чтобы перейти на главную страницу</h1>
+    <a href="index.html"> <img src="img/fu.jpg" alt=""> </a>
+</div>
+
+<audio src="music/oda.mp3" class="zvuki5"></audio>
+<audio src="music/oda.mp3" class="finaloda"></audio>
+<script>
+        
+
+          var danyaHeadCock=0;
+          var danyabodyCock=0;
+          var danyanogiCock=0;
+
+          function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+  }
+
+    var danyaHead=[];
+    for(i=0;i<=5;i++){
+        danyaHead[i]=document.getElementsByClassName(i+'golova')[0];
+    }
+
+var danyabody=[]
+for(var j=0; j<=5;j++){
+    danyabody[j]=document.getElementsByClassName(j+'telo')[0];
+}
+
+var danyanogi=[]
+for(var p=0; p<=5;p++){
+    danyanogi[p]=document.getElementsByClassName(p+'nogi')[0];
+    }
+
+
+    var sumCothes=(danyaHead.length-1)+(danyabody.length-1)+(danyanogi.length-1);
+  var vkusDanya=randomInteger(0,sumCothes);
+
+
+var vibor=0;
+if(vibor==vkusDanya&&flag){
+document.getElementsByClassName('finaoda')[0].play();
+}
+    function headRight(){
+        danyaHeadCock=danyaHeadCock+1;
+        if(danyaHeadCock>5){
+            danyaHead[danyaHeadCock-1].style.display='none';
+             danyaHeadCock=0;
+             danyaHead[danyaHeadCock].style.display='block';
+         }else{ 
+         danyaHead[danyaHeadCock].style.display='block';
+         danyaHead[danyaHeadCock-1].style.display='none';
+         }
+
+         
+var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+   document.getElementsByClassName('zvuki5')[0].play();
+}
+            }
+
+
+function bodyRight(){
+    danyabodyCock=danyabodyCock+1
+    if(danyabodyCock>5){
+            danyabody[danyabodyCock-1].style.display='none';
+             danyabodyCock=0;
+             danyabody[danyabodyCock].style.display='block';
+         }else{ 
+         danyabody[danyabodyCock].style.display='block';
+         danyabody[danyabodyCock-1].style.display='none';
+         }
+         var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+    document.getElementsByClassName('zvuki5')[0].play();
+}
+         
+}
+
+function nogiRight(){
+    danyanogiCock=danyanogiCock+1;
+    if(danyanogiCock>5){
+    danyanogi[danyanogiCock-1].style.display='none';
+    danyanogiCock=0;
+    danyanogi[danyanogiCock].style.display='block';
+    }else{ 
+    danyanogi[danyanogiCock].style.display='block';
+    danyanogi[danyanogiCock-1].style.display='none';
+    }
+
+    var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+    document.getElementsByClassName('zvuki5')[0].play();
+}
+}
+
+function headLeft(){ 
+    if(danyaHeadCock==0){
+        danyaHead[0].style.display='none';
+        danyaHeadCock=5;
+        danyaHead[5].style.display='block';
+    }else{ 
+    danyaHeadCock=danyaHeadCock-1;
+    danyaHead[danyaHeadCock].style.display='block';
+    danyaHead[danyaHeadCock+1].style.display='none';
+    }
+
+             
+var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+    document.getElementsByClassName('zvuki5')[0].play();
+}
+}
+
+function bodyLeft(){
+    if(danyabodyCock==0){
+        danyabody[0].style.display='none';
+        danyabodyCock=5;
+        danyabody[danyabodyCock].style.display='block';
+        }else{ 
+    danyabodyCock=danyabodyCock-1;
+    danyabody[danyabodyCock].style.display='block';
+    danyabody[danyabodyCock+1].style.display='none';
+        }
+
+                 
+var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+    document.getElementsByClassName('zvuki5')[0].play();
+}
+}
+
+function nogiLeft(){
+    if(danyanogiCock==0){
+     danyanogi[danyanogiCock].style.display='none';
+     danyanogiCock=5;
+     danyanogi[danyanogiCock].style.display='block';
+    }else{    
+danyanogiCock=danyanogiCock-1;
+danyanogi[danyanogiCock].style.display='block';
+danyanogi[danyanogiCock+1].style.display='none';
+    }   
+
+             
+var vibor=danyaHeadCock+danyabodyCock+danyanogiCock;
+
+if(vibor==vkusDanya){
+    document.getElementsByClassName('zvuki5')[0].play();
+} 
+}
+
+
+if(window.innerWidth<450){
+    document.getElementById('slide-music').style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+document.getElementsByTagName('ul')[0].style.display='none';
+document.getElementsByClassName('burger')[0].style.display='block';
+}
+
+var klick = 0;
+$('.burger').click(function(){
+if(klick<1){ 
+    klick++
+$(".menu").slideDown(1000);
+}else if(klick>0){
+    $(".menu").slideUp(1000);
+    klick--;
+}
+});
+
+window.onresize=function(){
+    shirina = innerWidth - rightMusicWidth - leftMusicWidth - 15;
+        document.getElementById("slide-music").style.width = shirina + 'px';     
+    if(window.innerWidth>450){
+           document.getElementsByClassName('menu')[0].style.display='none';
+           document.getElementsByClassName('menuFake')[0].style.display='none';    
+       }
+
+
+       if(window.innerWidth<745){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='inline-block';
+
+}
+
+if(window.innerWidth>745){
+document.getElementsByClassName('wbig')[0].style.display='inline-block';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth<=450){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+ 
+  }
+
+
+
+
+</script>
+</body>  
+</html> 

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Даня блин</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+
+    </script>
+     <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+        <div class="cap">
+                <div class="cap_fake">
+                    
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                   
+                     <li class="wbig ">
+                         <a href="naryad.html">
+                     Наряди Даню
+                </a>
+                     </li>
+                     <li class="telw" style='display:none'>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                     <li> 
+                     <a href="index.html">
+                            Домой
+                  </a>
+                </li>
+                           </li>
+                 </ul>
+                 <div class="burger">
+                        <img src="img/icon.png" alt="" class="icona">
+                 </div>
+             </div>
+             </div>
+                 <div class="menu"> 
+             <div class="menuFake">
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                     <li>
+                            <a href="index.html">
+                         Домой
+               </a>
+                        </li>
+                 </ul>
+             </div>
+            </div>
+    <div id="0avtomatTest">
+    <h1 style="text-align:center; margin-top:25px;"> Тест про Даню </h1>
+    <p class="logTests" style="text-align:center; margin-top:25px; font-size: 30px;"> 
+       Эта страница про Данин тест. Пройдя его, ты узнаешь как хорошо ты знаком с  Даней Григоенко. Правила просты - у тебя есть 4 минуты, чтобы ответь на все 
+       вопросы. 
+    </p>
+    <div class="start" onclick="nextAnswer()">
+        <p>Пёхаем?</p>
+    </div>
+  
+    </div>
+
+     <div id="orentir"></div>
+     <div class="sadLife" onclick="trueNextAnswer()" style='display:none'>
+        <p>Пёхаем?</p>
+    </div>
+    <div class="itogLevel">
+
+    </div>
+    <div class="zaebis">
+
+    </div>
+    <img src="img/png-transparent-thumbs-up-emoticon-thumb-signal-smiley-emoticon-lovely-smile-love-people-love-couple.png" alt="" class="kartItog">
+    <img src="img/notRad.jpg" alt="" class="kartItog">
+    <div class="sobad">
+
+    </div>
+
+
+    <div class="shit">
+        <p>
+            Вопросы, на которые ты,почему-то, не ответил:
+        </p>
+    </div>
+    <audio src="music/sieb.mp3" class="f"></audio>
+    <script>
+
+
+
+var klick = 0;
+$('.burger').click(function(){
+if(klick<1){ 
+    klick++
+$(".menu").slideDown(1000);
+$(".menuFake").slideDown(1000);
+}else if(klick>0){
+    $(".menu").slideUp(1000);
+    $(".menuFake").slideUp(1000);
+    klick--;
+}
+});
+ 
+window.onresize=function(){
+     
+    if(window.innerWidth>450){
+           document.getElementsByClassName('menu')[0].style.display='none';
+           document.getElementsByClassName('menuFake')[0].style.display='none';    
+       }
+
+
+       if(window.innerWidth<745){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='inline-block';
+
+}
+
+if(window.innerWidth>745){
+document.getElementsByClassName('wbig')[0].style.display='inline-block';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth<=450){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+ 
+  }
+
+
+
+
+
+        var masBad=[];
+        var otvetBad=[];
+        var masGood=[];
+        var favoriteDress=[];
+        var fs=0;
+       var vopros = ['Какой реперский ник у Дани Григорьева?','Какого числа день рождения у Дани Григорьева?','Любимое блюдо Дани?','Любимая группа Дани?','Увлечение Дагри?','На кого пойдет Даня?','Как звали исполнителей, которые посвятили песню Дане?','Продюссер Дани?','Что Даня сказал им?','Песня, которую записал Даня'];
+       var pred = 1;
+       
+         
+       var otveti = [
+  ['humanboy','14  сентября','макарошки с тушенкой','ср','музыка','зубной техник','Лёхи','mynameisdenis','подайте мне жоинт','я летаю по битам'],
+  ['Nileto','29 февраля','сигареты','суицайд бойз','фильмы','химик','humanboy','smokeasac','демоны','песня про Даню'],
+  ['эщкериал бой','15 ноября','курага','сектор газа','химия(нет,конечно)','репером','mynameisdenis','joint','о да','типичная вечеринка с бассейном'],
+  ['giveyoumoon','4 июня','яйца','киз','турнички','поваром','pirdjojo','jeembo','не, не то','не пиши мне'],
+];
+
+function sieb(){
+    document.location.href = "https://www.google.com/search?q=%D0%BA%D0%B0%D0%BF%D0%B8%D0%B1%D0%B0%D1%80%D0%B0&sxsrf=ALiCzsbhsGKsP9KNpv8xKmTKc3ubo6Sq4w:1655402628943&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjV3aGtx7L4AhWktIsKHaRcAo8Q_AUoAXoECAIQAw&biw=2133&bih=1076&dpr=0.9#imgrc=3CEDZBbJkDJYvM";
+}
+
+console.log(otveti[3][0]); // 1
+/*function delitTrap(min,max){
+    var su=Math.floor((Math.random()*(max-min+1))+min);
+    return su; 
+}*/
+ /* алгоритм рандома без повтора*/function getShuffledArray(min, max) {
+  var res = [];
+  for (var i = min; i <= max; i++) {
+    res.push(i);
+  }
+  res.sort((a, b) => 0.5 - Math.random());
+  return res;
+}
+
+
+var shuffled = getShuffledArray(4, 9);
+console.log(JSON.stringify(shuffled));
+//var d = delitTrap(0,3);
+           
+           var  nach = 0;
+           var konec =3;
+           var chikago = [];
+           var samChikago = 0;
+
+        var BlockOne = [];
+        var BlockTwo = [];
+        var BlockThree = [];
+        var BlockFour = [];
+        
+        var randVar = [];
+
+        var nextLevelBlock = null;
+
+        for(var pyat=0;pyat<=10;pyat++){
+            randVar[pyat]=getShuffledArray(0, 3);
+        }
+        console.log(randVar[4][1]);
+
+        var gg = [];
+var boy = document.getElementsByTagName('script')[1];
+var chekparent = boy.parentNode;
+var level = 0;
+var chek=[];
+function isOverflowed(el) {
+  return el.scrollWidth > el.offsetWidth ||
+    el.scrollHeight > el.offsetHeight;
+}
+     function nextAnswer(){ 
+         samChikago=samChikago+1;
+        for (var j = 1; j <= 10; j++) {
+  gg[j] = document.createElement('div');
+  gg[j].textContent = vopros[j-1];
+  gg[j].id = j + 'avtomatTest';
+  gg[j].className='mozgi'
+  gg[j].style.display='none';
+  gg[j].style.marginTop=55+'px';     
+  var chekgg = [];
+  chekgg[j] = gg[j].parentNode;
+  chekparent.insertBefore(gg[j], boy);
+  BlockOne[j]=document.createElement('div');
+  BlockOne[j].className='otvetOne';
+  BlockOne[j].id=j-1;
+  BlockOne[j].textContent=otveti[randVar[j-1][0]][j-1];
+  console.log(BlockOne[j]);
+  BlockOne[j].style.display='none';
+  chekparent.insertBefore(BlockOne[j],boy);
+
+  BlockTwo[j]=document.createElement('div');
+  BlockTwo[j].className='otvetOne';
+  BlockOne[j].id=j;
+  BlockTwo[j].textContent=otveti[randVar[j-1][1]][j-1];
+  BlockTwo[j].style.display='none';
+  chekparent.insertBefore(BlockTwo[j],boy);
+  
+  BlockThree[j]=document.createElement('div');
+  BlockThree[j].className='otvetOne';
+  BlockOne[j].id=j+1;
+  BlockThree[j].textContent=otveti[randVar[j-1][2]][j-1];
+  BlockThree[j].style.display='none';
+  chekparent.insertBefore(BlockThree[j],boy);
+  
+
+  BlockFour[j]=document.createElement('div');
+  BlockFour[j].className='otvetOne';
+  BlockOne[j].id=j+2;
+  BlockFour[j].textContent=otveti[randVar[j-1][3]][j-1];
+  BlockFour[j].style.display='none';
+  chekparent.insertBefore(BlockFour[j],boy);  
+ 
+    
+ $(BlockOne[j]).one('click',function(){
+    if(chikago[samChikago]!=true){
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     chikago[samChikago]=true;
+     if(this.textContent==otveti[0][samChikago-1]){
+         level=level+1;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     
+     }else{
+         masBad[samChikago-1]=vopros[samChikago-1];
+         otvetBad[samChikago-1]=this.textContent;
+         masGood[samChikago-1]=otveti[0][samChikago-1];
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     chikago[samChikago]=true;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     }} } );
+        
+
+ $(BlockTwo[j]).one('click',function(){
+ 
+    if(chikago[samChikago]!=true){ 
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     if(this.textContent==otveti[0][samChikago-1]){
+         chikago[samChikago]=true;
+         level++;
+         chek++;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+            
+                 
+                 document.getElementsByClassName('sadLife')[0].style.display='block';
+     }else{
+        masBad[samChikago-1]=vopros[samChikago-1];
+         otvetBad[samChikago-1]=this.textContent;
+         masGood[samChikago-1]=otveti[0][samChikago-1];
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+         chek++;
+         chikago[samChikago]=true;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+     } document.getElementsByClassName('sadLife')[0].style.display='block';}  } });
+
+     $(BlockThree[j]).one('click',function(){
+    if(chikago[samChikago]!=true){ 
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     chikago[samChikago]=true;
+     if(this.textContent==otveti[0][samChikago-1]){
+         level++;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     }else{
+        masBad[samChikago-1]=vopros[samChikago-1];
+         otvetBad[samChikago-1]=this.textContent;
+         masGood[samChikago-1]=otveti[0][samChikago-1];
+        document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     chikago[samChikago]=true;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     }} } );
+
+     $(BlockFour[j]).one('click',function(){
+    if(chikago[samChikago]!=true){
+     chikago[samChikago]=true;
+     document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+     if(this.textContent==otveti[0][samChikago-1]){
+         level++;
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     }else{
+        masBad[samChikago-1]=vopros[samChikago-1];
+         otvetBad[samChikago-1]=this.textContent;
+         masGood[samChikago-1]=otveti[0][samChikago-1];
+     chikago[samChikago]=true;
+     document.getElementById(pred+'avtomatTest').style.marginTop=0+'px';
+      this.style.background='#f3cbec';
+      this.style.cursor='default';
+      for(var y=nach;y<=konec;y++){
+          document.getElementsByClassName('otvetOne')[y].style.cursor='default';
+                }
+                document.getElementsByClassName('sadLife')[0].style.display='block';
+     }} } );
+
+
+ }
+        
+    for(i=0;i<=15;i++){
+            favoriteDress[i]=document.getElementById(i+'avtomatTest');
+        }
+        
+
+
+            favoriteDress[fs].style.display='none';
+            fs=fs+1;
+            favoriteDress[fs].style.display='block';
+            BlockOne[fs].style.display='block';
+            BlockTwo[fs].style.display='block';
+            BlockThree[fs].style.display='block';
+            BlockFour[fs].style.display='block';
+
+    
+        }
+
+        var itogPromezh=1;
+     var gh=[];
+     gh[0]=0;
+     gh[1]=1;
+     gh[2]=2;
+     gh[3]=3;
+
+       function trueNextAnswer(){
+        if(chek[samChikago]==true){
+               level++;
+           }
+           pred++;
+           if(pred>10){
+            document.getElementsByClassName('sadLife')[0].style.display='none';
+            document.getElementById(itogPromezh+'avtomatTest').style.display='none';
+        document.getElementsByClassName('otvetOne')[gh[0]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[1]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[2]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[3]].style.display='none';
+         for(var nn=0;nn<=10;nn++){
+             if(masBad[nn]!=undefined){
+                 document.getElementsByClassName('shit')[0].style.display='block';
+             }
+         }
+
+          var elemVopros=[];
+              var elemG=[];
+              var elemB=[];
+              var fg=0;
+          for(fg=0;fg<=masBad.length;fg++){   
+                elemVopros[fg]=document.createElement('div');
+                elemVopros[fg].textContent=masBad[fg];
+                elemVopros[fg].className='voprBad';
+                chekparent.insertBefore(elemVopros[fg],boy);
+
+
+                elemB[fg]=document.createElement('div');
+                elemB[fg].textContent='ты ответил: '+otvetBad[fg];
+                elemB[fg].style.color='red';
+                elemB[fg].className='badAnsw';
+                chekparent.insertBefore(elemB[fg],boy);
+
+    
+                elemG[fg]=document.createElement('div');
+                elemG[fg].textContent='правильный ответ: '+masGood[fg];
+                elemG[fg].style.color='green';
+                elemG[fg].className='goodAnsw';
+                chekparent.insertBefore(elemG[fg],boy);
+
+                if(document.getElementsByClassName('badAnsw')[fg].textContent=='ты ответил: undefined'||document.getElementsByClassName('goodAnsw')[fg].textContent=='правильный ответил: undefined'){
+                    document.getElementsByClassName('badAnsw')[fg].style.display='none';
+                    document.getElementsByClassName('goodAnsw')[fg].style.display='none';
+                }
+            }
+
+          if(level>=8){
+            document.getElementsByClassName('itogLevel')[0].style.display='block';
+            document.getElementsByClassName('zaebis')[0].style.display='block';
+            document.getElementsByClassName('itogLevel')[0].textContent='ты ответил на '+level+' вопросов';
+            document.getElementsByClassName('zaebis')[0].textContent='Ты хорошо знаешь Даню, респект тебе.Скорее всего ты и есть Даня. Ну че, Данил, как тебе сайт?';
+            document.getElementsByClassName('kartItog')[0].style.display='block';
+          }else if(level>=5){
+            document.getElementsByClassName('itogLevel')[0].style.display='block';
+            document.getElementsByClassName('zaebis')[0].style.display='block';
+            document.getElementsByClassName('itogLevel')[0].textContent='ты ответил на '+level+' вопросов';
+            document.getElementsByClassName('zaebis')[0].textContent='Ты нормально  знаешь Даню.Скорее вы с ним друзья и иногда поддерживаете общение.';
+            document.getElementsByClassName('kartItog')[0].style.display='block';
+          }else if(level>=3){
+            document.getElementsByClassName('itogLevel')[0].style.display='block';
+            document.getElementsByClassName('zaebis')[0].style.display='block';
+            document.getElementsByClassName('itogLevel')[0].textContent='ты ответил на '+level+' вопросов';
+            document.getElementsByClassName('zaebis')[0].textContent='Ты  плохо знаешь Даню.Даня бы не стал с тобой иметь дело, но все равно будет общаться. Если бы ты еще хуже ответил на тест, то он бы не сдержался и просто ударил бы тебя и публично оскорбил.';
+            document.getElementsByClassName('kartItog')[1].style.display='block';
+          }else if(level<3){
+            document.getElementsByClassName('itogLevel')[0].style.display='block';
+            document.getElementsByClassName('zaebis')[0].style.display='block';
+            document.getElementsByClassName('itogLevel')[0].textContent='ты ответил на '+level+' вопросов';
+            document.getElementsByClassName('zaebis')[0].textContent='Ты вообще не знаешь Даню';
+             setTimeout(sieb,4000)
+          }
+           }else{
+        document.getElementById(itogPromezh+'avtomatTest').style.display='none';
+        document.getElementsByClassName('otvetOne')[gh[0]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[1]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[2]].style.display='none';
+          document.getElementsByClassName('otvetOne')[gh[3]].style.display='none';
+           itogPromezh++;
+           nach=nach+4;
+           konec=konec+4;
+          samChikago=samChikago+1;
+        
+          gh[0]=gh[0]+4;
+          gh[1]=gh[1]+4;
+          gh[2]=gh[2]+4;
+          gh[3]=gh[3]+4;
+          document.getElementsByClassName('otvetOne')[gh[0]].style.display='block';
+          document.getElementsByClassName('otvetOne')[gh[1]].style.display='block';
+          document.getElementsByClassName('otvetOne')[gh[2]].style.display='block';
+          document.getElementsByClassName('otvetOne')[gh[3]].style.display='block';
+
+          document.getElementById(itogPromezh+'avtomatTest').style.display='block';
+
+          document.getElementsByClassName('sadLife')[0].style.display='none';
+           }
+       }
+
+    
+
+    </script>
+    </body>
+    </html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Даня блин</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+     <meta name="viewport" content="width=device-width" />
+</head>
+
+<body>
+        <div class="cap">
+                <div class="cap_fake">
+                    
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li class="wbig ">
+                         <a href="naryad.html">
+                     Наряди Даню
+                </a>
+                     </li>
+                     <li class="telw" style='display:none'>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+                 </ul>
+                 <div class="burger">
+                        <img src="icon.png" alt="" class="icona">
+                 </div>
+             </div>
+             </div>
+                 <div class="menu"> 
+             <div class="menuFake">
+                 <ul class="bleed">
+                     <li>
+                         <a href="music.html">
+                     Музыка Дани
+                </a>
+                     </li>
+                     <li>
+                         <a href="test.html">
+                     Тест про Даню
+            </a>
+                     </li>
+                     <li>
+                         <a href="favorite.html">
+                    Любимое Дани
+            </a>
+                     </li>
+
+                     <li>
+                            <a href="index.html">
+                         Домой
+               </a>
+                        </li>
+                 </ul>
+             </div>
+            </div>
+    <h1 style="margin-top:25px;text-align: center">Приготовь отличную связку Дани</h1>
+    <p style='text-align: center;font-size:30px'>  У дани сушняк. Помогите Дане, сделайте ему хорошо. Дайте запить, но есть одно но - Даня после напитков хочет смокать. Решите все проблемы Дани. </p>
+   <div class="napitki" style='margin-top:20px;'>
+     <img src="img/viski.png" alt="" id='1' style="width:80px;height:80px;">
+     <img src="img/lin.png" alt="" id='2' style="width:80px;height:80px;">
+     <img src="img/pevko.png" alt="" id='3' style="width:80px;height:80px;">
+    </div>
+     <div class="smoke">
+        <img src="img/smoke.png" alt="" class="smoky" id='smoke1' style="width:50;height: 50; display: none;">
+        <img src="img/smoke.png" alt="" class="smoky" id='smoke2' style="width:50;height: 50; display: none;" >
+        <img src="img/smoke.png" alt="" class="smoky" id='smoke3' style="display: none;width:50;height: 50;">
+         <img src="img/smoke.png" alt="" class="smoky" id='smoke4' style="width:50;height: 50;display: none;">
+    </div> 
+        <div class="siga">
+             <img src="img/siga.png" alt="" id='siga' style="display:none" onclick="finalSmoke()">
+        </div>
+     <div class="samDanya" >
+        <img src="img/danyapng.png" alt="">
+    </div>
+ 
+      <p id="itog" style="display:none;text-align:center; margin-top:15px;font-size: 20px;"> Вы сделали хорошо типу, можете попробовать заново, обновя страницу, т.к. генерируются новые вкусы и наполненные пачки сиг. </p>
+       <audio src="music/smoke.mp3" class="zvuki0"></audio>
+    <audio src="music/drink.mp3" class="zvuki1"></audio>
+     <audio src="music/neto.mp3" class="zvuki3"></audio>
+     <audio src="music/pusto.mp3" class="zvuki4"></audio>
+     <audio src="music/oda.mp3" class="zvuki5"></audio>
+     <audio src="music/kotey.mp3" class="zvuki6"></audio>
+    <script>
+
+var klick = 0;
+$('.burger').click(function(){
+if(klick<1){ 
+    klick++
+$(".menu").slideDown(1000);
+$(".menuFake").slideDown(1000);
+}else if(klick>0){
+    $(".menu").slideUp(1000);
+    $(".menuFake").slideUp(1000);
+    klick--;
+}
+});
+
+          var worldCup=[];
+          for(i=0;i<=6;i++){
+              worldCup[i]=document.getElementsByClassName('zvuki'+i)[0];
+          }
+          function randomInteger(min, max) {
+    var rand = min - 0.5 + Math.random() * (max - min + 1)
+    rand = Math.round(rand);
+    return rand;
+  }
+ var samrand=randomInteger(1,3);
+
+          for(var j=1;j<=3;j++){
+             document.getElementById(j).onclick=function(){
+                 if(worldCup[1].paused==true && worldCup[0].paused==true){ 
+                 worldCup[3].play();
+                 }
+             }
+          }
+       
+    function sigi(){
+                for(var p=0; p<=3; p++){
+                    document.getElementsByClassName('smoky')[p].style.display='inline-block';
+                }
+    }
+      
+        var chek = false;
+        document.getElementById(samrand).onclick=function good(){
+            if(chek==false){ 
+                chek = true
+            worldCup[1].play();
+            setTimeout(smoking,4000);
+            setTimeout(sigi,6500);
+            }
+        }
+
+    function smoking(){
+        chek = true;
+             worldCup[0].play();
+            
+    }
+      function napitokFalse(){
+           worldCup[3].play();
+      }
+
+      var sigiRand = randomInteger(1,4);
+      
+      document.getElementById('smoke'+sigiRand).onclick=function(){
+          document.getElementById('siga').style.display='block';
+          this.style.display='none';
+      }
+
+     for(var a=1;a<=4;a++){
+         if(a==sigiRand){
+             a=a+1;
+         }
+         document.getElementById('smoke'+a).onclick=function(){
+             worldCup[4].play();
+             this.style.display='none';
+         }
+     }
+     
+     function finalSmoke(){
+        worldCup[6].play();
+         function final(){worldCup[5].play();}
+           setTimeout(final,4000)
+          document.getElementById('itog').style.display='block';
+            }
+
+
+
+            if(window.innerWidth<240){  
+    document.getElementsByTagName('h1')[0].style.fontSize=18+'px';
+    var h=document.getElementsByTagName('p');
+    for(var bu=0;bu<h.length;bu++){
+       h[bu].style.fontSize=18+'px';
+      } 
+}
+
+
+            window.onresize=function(){      
+    if(window.innerWidth>450){
+           document.getElementsByClassName('menu')[0].style.display='none';
+           document.getElementsByClassName('menuFake')[0].style.display='none';    
+       }
+
+
+       if(window.innerWidth<745){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='inline-block';
+
+}
+
+if(window.innerWidth>745){
+document.getElementsByClassName('wbig')[0].style.display='inline-block';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth<=450){
+document.getElementsByClassName('wbig')[0].style.display='none';
+document.getElementsByClassName('telw')[0].style.display='none';
+}
+
+if(window.innerWidth<240){  
+    document.getElementsByTagName('h1')[0].style.fontSize=18+'px';
+    var h=document.getElementsByTagName('p');
+    for(var bu=0;bu<h.length;bu++){
+       h[bu].style.fontSize=18+'px';
+      } 
+}
+ }
+
+
+
+  
+     </script>
+    </body>
+    </html>
